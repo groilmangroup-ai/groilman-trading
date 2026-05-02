@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --bg-light: #f5f3f0;
+  --bg-dark: #0a0a0a;
+  --text-on-light: #1a1a1a;
+  --text-on-dark: #f0ede8;
+  --accent: #00ff88; /* Trading green */
+  --accent-secondary: #ff4444; /* Trading red */
+}
+
+@theme {
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply bg-(--bg-dark) text-(--text-on-dark) overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer components {
+  .dashboard-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-3 p-3;
+  }
+
+  .panel {
+    @apply bg-black/20 border border-white/5 rounded-xl backdrop-blur-md overflow-hidden flex flex-col min-h-0;
+  }
+
+  .panel-header {
+    @apply px-3 sm:px-4 py-2 sm:py-3 border-b border-white/5 flex items-center justify-between bg-black/40;
+  }
+
+  .panel-title {
+    @apply text-xs sm:text-sm font-bold tracking-widest uppercase text-white/70;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/20;
+}

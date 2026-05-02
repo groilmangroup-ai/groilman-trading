@@ -1,1 +1,0 @@
-{"version":3,"file":"indicator.service.d.ts","sourceRoot":"","sources":["../../src/services/indicator.service.ts"],"names":[],"mappings":"AAQA,qBAAa,gBAAgB;IAC3B;;;;;OAKG;WACU,MAAM,CAAC,MAAM,EAAE,MAAM,EAAE,QAAQ,GAAE,MAAgB,EAAE,WAAW,GAAE,MAAW;IAoBxF;;OAEG;WACU,OAAO,CAAC,MAAM,EAAE,MAAM,EAAE,QAAQ,GAAE,MAAgB;IAmB/D;;OAEG;WACU,iBAAiB,CAAC,MAAM,EAAE,MAAM,EAAE,QAAQ,GAAE,MAAgB;CAqB1E"}
